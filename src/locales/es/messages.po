@@ -8,7 +8,7 @@ msgstr ""
 "Language: es\n"
 "Project-Id-Version: juicebox-interface\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-06-08 02:52\n"
+"PO-Revision-Date: 2022-06-07 02:46\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -2611,6 +2611,14 @@ msgstr "Este proyecto usa la versión V2 de los contratos de Juicebox."
 #: src/components/v2/V2Project/TreasuryStats/ProjectBalance.tsx
 msgid "This project's balance in the Juicebox contract."
 msgstr "El balance de este proyecto en el contrato de Juicebox."
+
+#: src/components/shared/Project/FundingCycleDetailsCard.tsx
+msgid "This proposed funding cycle reconfiguration has an active ballot and isn't yet approved."
+msgstr ""
+
+#: src/components/shared/Project/FundingCycleDetailsCard.tsx
+msgid "This proposed funding cycle reconfiguration has failed."
+msgstr ""
 
 #: src/components/v1/FundingCycle/FundingCycleDetails.tsx
 msgid "This rate determines the amount of overflow that each token can be redeemed for at any given time. On a lower bonding curve, redeeming a token increases the value of each remaining token, creating an incentive to hold tokens longer than others. A bonding curve of 100% means all tokens will have equal value regardless of when they are redeemed."
