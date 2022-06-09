@@ -233,6 +233,10 @@ msgstr "<0>Your unclaimed {tokenSymbol} tokens:</0> {0}"
 msgid "<0>{tokenSymbol} ERC-20 address:</0> <1/>"
 msgstr "<0>{tokenSymbol} ERC-20 address:</0> <1/>"
 
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+msgid "<0>{v2ProjectName}</0> has tokens on <1>Juicebox V1</1>. You can migrate your <2>{v2ProjectName}</2> V1 tokens to V2."
+msgstr "<0>{v2ProjectName}</0> has tokens on <1>Juicebox V1</1>. You can migrate your <2>{v2ProjectName}</2> V1 tokens to V2."
+
 #: src/components/shared/formItems/ProjectTwitter.tsx
 #: src/components/v1/V1Create/ConfirmDeployProject.tsx
 msgid "@"
@@ -1045,6 +1049,10 @@ msgstr "Distribution limit, duration and payouts"
 msgid "Do I have to make my project open source to use Juicebox as its business model?"
 msgstr ""
 
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+msgid "Do I need to migrate?"
+msgstr "Do I need to migrate?"
+
 #: src/components/Navbar/constants.ts
 msgid "Docs"
 msgstr ""
@@ -1569,6 +1577,11 @@ msgstr "Maximum {MAX_DESCRIPTION_LENGTH} characters"
 #: src/components/v2/V2Project/V2PayButton/V2ConfirmPayModal/index.tsx
 msgid "Memo"
 msgstr "Memo"
+
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+msgid "Migrate V1 {tokenSymbolFormatted} to V2"
+msgstr "Migrate V1 {tokenSymbolFormatted} to V2"
 
 #: src/components/v1/V1Project/modals/MigrateV1Pt1Modal.tsx
 msgid "Migrate to Juicebox V1.1"
@@ -2449,6 +2462,10 @@ msgstr "Sum of percentages cannot exceed 100%"
 msgid "Sum of percentages cannot exceed 100%."
 msgstr "Sum of percentages cannot exceed 100%."
 
+#: src/components/v2/V2Project/V2ManageTokensSection/index.tsx
+msgid "Swap for V2 {tokenText}"
+msgstr "Swap for V2 {tokenText}"
+
 #: src/components/v1/V1Create/ConfirmDeployProject.tsx
 #: src/components/v1/shared/FundingCycle/FundingCycleDetails.tsx
 msgid "Target"
@@ -2753,6 +2770,10 @@ msgstr "Tokens minted from payments to this address will belong to the payer by 
 #: src/components/v2/V2Project/V2ManageTokensSection/V2MintModal.tsx
 msgid "Tokens receiver"
 msgstr "Tokens receiver"
+
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+msgid "Tokens to migrate"
+msgstr "Tokens to migrate"
 
 #: src/components/v2/shared/SplitItem.tsx
 msgid "Tokens:"
@@ -3076,6 +3097,14 @@ msgstr ""
 #: src/components/v2/V2Project/banners/RelaunchFundingCycleBanner.tsx
 msgid "Your Juicebox project has no active funding cycle. Launch a funding cycle to re-enable payments on your project."
 msgstr "Your Juicebox project has no active funding cycle. Launch a funding cycle to re-enable payments on your project."
+
+#: src/components/v2/V2Project/V2ManageTokensSection/index.tsx
+msgid "Your V1 balance"
+msgstr "Your V1 balance"
+
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+msgid "Your V1 {tokenSymbolFormatted} balance:"
+msgstr "Your V1 {tokenSymbolFormatted} balance:"
 
 #: src/components/v1/V1Project/Rewards/index.tsx
 #: src/components/v2/V2Project/V2ManageTokensSection/index.tsx

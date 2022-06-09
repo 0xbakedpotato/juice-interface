@@ -238,6 +238,10 @@ msgstr "<0>Hak talebinde bulunulmamış {tokenSymbol} token'larınız:</0> {0}"
 msgid "<0>{tokenSymbol} ERC-20 address:</0> <1/>"
 msgstr "<0>{tokenSymbol} ERC-20 adresi:</0> <1/>"
 
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+msgid "<0>{v2ProjectName}</0> has tokens on <1>Juicebox V1</1>. You can migrate your <2>{v2ProjectName}</2> V1 tokens to V2."
+msgstr ""
+
 #: src/components/shared/formItems/ProjectTwitter.tsx
 #: src/components/v1/V1Create/ConfirmDeployProject.tsx
 msgid "@"
@@ -1050,6 +1054,10 @@ msgstr "Dağıtım sınırı, süre ve ödemeler"
 msgid "Do I have to make my project open source to use Juicebox as its business model?"
 msgstr "Juicebox'ı iş modeli olarak kullanmak için projemi açık kaynak yapmak zorunda mıyım?"
 
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+msgid "Do I need to migrate?"
+msgstr ""
+
 #: src/components/Navbar/constants.ts
 msgid "Docs"
 msgstr "Dokümanlar"
@@ -1574,6 +1582,11 @@ msgstr ""
 #: src/components/v2/V2Project/V2PayButton/V2ConfirmPayModal/index.tsx
 msgid "Memo"
 msgstr "Not"
+
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+msgid "Migrate V1 {tokenSymbolFormatted} to V2"
+msgstr ""
 
 #: src/components/v1/V1Project/modals/MigrateV1Pt1Modal.tsx
 msgid "Migrate to Juicebox V1.1"
@@ -2251,7 +2264,7 @@ msgstr "Ayrılmış {0}"
 #: src/components/v1/shared/FundingCycle/FundingCycleDetails.tsx
 #: src/components/v2/V2Project/V2FundingCycleSection/FundingCycleDetails.tsx
 msgid "Reserved {tokenSymbolPlural}"
-msgstr ""
+msgstr "Ayrılmış {tokenSymbolPlural}"
 
 #: src/components/v2/V2Project/V2FundingCycleSection/modals/DistributeReservedTokensModal.tsx
 msgid "Reserved {tokenTextPlural}: <0>{reservedTokensFormatted} {tokenTextPlural}</0>"
@@ -2453,6 +2466,10 @@ msgstr "Yüzdelerin toplamı %100'ü aşamaz"
 #: src/components/v2/shared/DistributionSplitsSection/index.tsx
 msgid "Sum of percentages cannot exceed 100%."
 msgstr "Yüzdelerin toplamı %100'ü aşamaz."
+
+#: src/components/v2/V2Project/V2ManageTokensSection/index.tsx
+msgid "Swap for V2 {tokenText}"
+msgstr ""
 
 #: src/components/v1/V1Create/ConfirmDeployProject.tsx
 #: src/components/v1/shared/FundingCycle/FundingCycleDetails.tsx
@@ -2758,6 +2775,10 @@ msgstr ""
 #: src/components/v2/V2Project/V2ManageTokensSection/V2MintModal.tsx
 msgid "Tokens receiver"
 msgstr "Token alıcısı"
+
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+msgid "Tokens to migrate"
+msgstr ""
 
 #: src/components/v2/shared/SplitItem.tsx
 msgid "Tokens:"
@@ -3082,6 +3103,14 @@ msgstr "Proje sözleşmeniz dağıtıldıktan sonra ERC-20 token'larını çıka
 msgid "Your Juicebox project has no active funding cycle. Launch a funding cycle to re-enable payments on your project."
 msgstr "Juicebox projenizin aktif bir finansman döngüsü yok. Projenizde ödemeleri yeniden etkinleştirmek için bir finansman döngüsü başlatın."
 
+#: src/components/v2/V2Project/V2ManageTokensSection/index.tsx
+msgid "Your V1 balance"
+msgstr ""
+
+#: src/components/shared/modals/MigrateProjectTokensModal.tsx
+msgid "Your V1 {tokenSymbolFormatted} balance:"
+msgstr ""
+
 #: src/components/v1/V1Project/Rewards/index.tsx
 #: src/components/v2/V2Project/V2ManageTokensSection/index.tsx
 msgid "Your balance"
@@ -3369,12 +3398,12 @@ msgstr "{label}"
 
 #: src/components/v1/shared/FundingCycle/FundingCycleDetails.tsx
 msgid "{payerRate} (+ {reservedRate} reserved) {tokenSymbolPlural}/ETH"
-msgstr ""
+msgstr "{payerRate} (+ ayrılmış {reservedRate}) {tokenSymbolPlural}/ETH"
 
 #: src/components/v1/shared/FundingCycle/FundingCycleDetails.tsx
 #: src/components/v2/V2Project/V2FundingCycleSection/FundingCycleDetails.tsx
 msgid "{payerRate} {tokenSymbolPlural}/ETH"
-msgstr ""
+msgstr "{payerRate} {tokenSymbolPlural}/ETH"
 
 #: src/components/Projects/TrendingProjectCard.tsx
 msgid "{paymentCount, plural, one {# payment} other {# payments}}"

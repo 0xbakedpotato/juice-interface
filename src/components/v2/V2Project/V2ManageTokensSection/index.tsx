@@ -21,8 +21,8 @@ import useTotalBalanceOf from 'hooks/v2/contractReader/TotalBalanceOf'
 import { ThemeContext } from 'contexts/themeContext'
 import useUserUnclaimedTokenBalance from 'hooks/v2/contractReader/UserUnclaimedTokenBalance'
 import ManageTokensModal from 'components/shared/ManageTokensModal'
-
 import ParticipantsModal from 'components/shared/modals/ParticipantsModal'
+import { MigrateProjectTokensModal } from 'components/shared/modals/MigrateProjectTokensModal'
 
 import V2RedeemModal from './V2RedeemModal'
 import V2ClaimTokensModal from './V2ClaimTokensModal'
@@ -30,6 +30,8 @@ import V2MintModal from './V2MintModal'
 
 export default function V2ManageTokensSection() {
   const [manageTokensModalVisible, setManageTokensModalVisible] =
+    useState<boolean>(false)
+  const [migrateTokensModalVisible, setMigrateTokensModalVisible] =
     useState<boolean>(false)
 
   const {
@@ -52,11 +54,13 @@ export default function V2ManageTokensSection() {
   const { data: claimedBalance } = useERC20BalanceOf(tokenAddress, userAddress)
   const { data: unclaimedBalance } = useUserUnclaimedTokenBalance()
 
+  const v1TokenBalance = 69420
+
   const [participantsModalVisible, setParticipantsModalVisible] =
     useState<boolean>(false)
 
   const labelStyle: CSSProperties = {
-    width: 128,
+    width: '10rem',
   }
 
   const hasIssuedERC20 = tokenAddress !== constants.AddressZero
@@ -138,7 +142,7 @@ export default function V2ManageTokensSection() {
             </div>
           }
           valueRender={() => (
-            <Descriptions layout="horizontal" column={1} size="small">
+            <Descriptions layout="horizontal" column={1}>
               {hasIssuedERC20 && tokenSymbol && (
                 <Descriptions.Item
                   label={t`Project token`}
@@ -177,52 +181,73 @@ export default function V2ManageTokensSection() {
                 </div>
               </Descriptions.Item>
               {userAddress ? (
-                <Descriptions.Item
-                  label={t`Your balance`}
-                  labelStyle={labelStyle}
-                  style={{ paddingBottom: '0.5rem' }}
-                >
-                  <div style={manageTokensRowStyle}>
-                    <div>
-                      {hasIssuedERC20 && (
-                        <div>
-                          {claimedBalanceFormatted} {tokenText}
-                        </div>
-                      )}
+                <>
+                  <Descriptions.Item
+                    label={t`Your balance`}
+                    labelStyle={labelStyle}
+                    style={{ paddingBottom: '0.5rem' }}
+                  >
+                    <div style={manageTokensRowStyle}>
                       <div>
-                        {hasIssuedERC20 ? (
-                          <Trans>
-                            {unclaimedBalanceFormatted} {tokenText} claimable
-                          </Trans>
-                        ) : (
-                          <>
-                            {unclaimedBalanceFormatted} {tokenText}
-                          </>
+                        {hasIssuedERC20 && (
+                          <div>
+                            {claimedBalanceFormatted} {tokenText}
+                          </div>
                         )}
+                        <div>
+                          {hasIssuedERC20 ? (
+                            <Trans>
+                              {unclaimedBalanceFormatted} {tokenText} claimable
+                            </Trans>
+                          ) : (
+                            <>
+                              {unclaimedBalanceFormatted} {tokenText}
+                            </>
+                          )}
+                        </div>
+                        <div
+                          style={{
+                            cursor: 'default',
+                            fontSize: '0.8rem',
+                            fontWeight: 500,
+                            color: colors.text.tertiary,
+                          }}
+                        >
+                          <Trans>
+                            {userOwnershipPercentage}% of total supply
+                          </Trans>
+                        </div>
                       </div>
-                      <div
-                        style={{
-                          cursor: 'default',
-                          fontSize: '0.8rem',
-                          fontWeight: 500,
-                          color: colors.text.tertiary,
-                        }}
-                      >
-                        <Trans>
-                          {userOwnershipPercentage}% of total supply
-                        </Trans>
-                      </div>
-                    </div>
 
-                    <Button
-                      size="small"
-                      onClick={() => setManageTokensModalVisible(true)}
-                      disabled={isPreviewMode}
-                    >
-                      <Trans>Manage {tokenText}</Trans>
-                    </Button>
-                  </div>
-                </Descriptions.Item>
+                      <Button
+                        size="small"
+                        onClick={() => setManageTokensModalVisible(true)}
+                        disabled={isPreviewMode}
+                      >
+                        <Trans>Manage {tokenText}</Trans>
+                      </Button>
+                    </div>
+                  </Descriptions.Item>
+                  <Descriptions.Item
+                    label={t`Your V1 balance`}
+                    labelStyle={labelStyle}
+                    style={{ paddingBottom: '0.5rem' }}
+                  >
+                    <div style={manageTokensRowStyle}>
+                      <span>
+                        {v1TokenBalance} {tokenText}
+                      </span>
+
+                      <Button
+                        size="small"
+                        onClick={() => setMigrateTokensModalVisible(true)}
+                        disabled={isPreviewMode}
+                      >
+                        <Trans>Swap for V2 {tokenText}</Trans>
+                      </Button>
+                    </div>
+                  </Descriptions.Item>
+                </>
               ) : null}
             </Descriptions>
           )}
@@ -251,6 +276,16 @@ export default function V2ManageTokensSection() {
         visible={participantsModalVisible}
         onCancel={() => setParticipantsModalVisible(false)}
       />
+      {projectMetadata?.name && (
+        <MigrateProjectTokensModal
+          v1TokenBalance={v1TokenBalance}
+          v1TokenSymbol="JBX"
+          v1ProjectHandle={'juicebox'}
+          v2ProjectName={projectMetadata.name}
+          visible={migrateTokensModalVisible}
+          onCancel={() => setMigrateTokensModalVisible(false)}
+        />
+      )}
     </>
   )
 }
