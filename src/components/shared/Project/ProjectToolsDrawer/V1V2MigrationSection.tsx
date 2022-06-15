@@ -1,11 +1,52 @@
 import { Trans } from '@lingui/macro'
 import { Button, Form, Input, Modal, Space } from 'antd'
 import { MinimalCollapse } from 'components/shared/MinimalCollapse'
-import { useState } from 'react'
+import { V2ProjectContext } from 'contexts/v2/projectContext'
+import { V2UserContext } from 'contexts/v2/userContext'
+import { useSetProjectTerminalsTx } from 'hooks/v2/transactor/SetProjectTerminalsTx'
+import { useSetV1ProjectIdTx } from 'hooks/v2/transactor/SetV1ProjectIdTx'
+import { useCallback, useContext, useState } from 'react'
+import { emitErrorNotification } from 'utils/notifications'
 
 export function V1V2MigrationSection() {
   const [migrationModalVisible, setMigrationModalVisible] =
     useState<boolean>(false)
+
+  const [form] = Form.useForm<{ v1ProjectId: number }>()
+
+  const { contracts } = useContext(V2UserContext)
+  const { terminals } = useContext(V2ProjectContext)
+
+  const setProjecTerminalsTx = useSetProjectTerminalsTx()
+  const setV1ProjectIdTx = useSetV1ProjectIdTx()
+
+  const onAddTerminal = useCallback(async () => {
+    if (!contracts?.JBV1V2MigrationTerminal.address) return
+
+    const newTerminals = [
+      ...(terminals || []),
+      contracts.JBV1V2MigrationTerminal.address,
+    ]
+    try {
+      const result = await setProjecTerminalsTx({ terminals: newTerminals })
+      if (!result) throw new Error()
+    } catch (e) {
+      emitErrorNotification('Error adding migration terminal.')
+      throw e
+    }
+  }, [terminals, setProjecTerminalsTx, contracts])
+
+  const onSetV1ProjectId = useCallback(async () => {
+    try {
+      const result = await setV1ProjectIdTx({
+        v1ProjectId: form.getFieldValue('v1ProjectId'),
+      })
+      if (!result) throw new Error()
+    } catch (e) {
+      emitErrorNotification('Error adding migration terminal.')
+      throw e
+    }
+  }, [setV1ProjectIdTx, form])
 
   return (
     <section>
@@ -65,7 +106,7 @@ export function V1V2MigrationSection() {
               </MinimalCollapse>
             </p>
 
-            <Button type="primary" size="small">
+            <Button type="primary" size="small" onClick={onAddTerminal}>
               Add Terminal
             </Button>
           </section>
@@ -78,8 +119,12 @@ export function V1V2MigrationSection() {
               V1 tokens for V2 tokens.
             </p>
 
-            <Form layout="vertical">
-              <Form.Item label={<Trans>Juicebox V1 project ID</Trans>}>
+            <Form layout="vertical" form={form} onFinish={onSetV1ProjectId}>
+              <Form.Item
+                name="v1ProjectId"
+                label={<Trans>Juicebox V1 project ID</Trans>}
+                required
+              >
                 <Input placeholder="1" />
               </Form.Item>
 
