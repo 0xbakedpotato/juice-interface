@@ -1075,6 +1075,10 @@ msgstr "分配上限、时长及支出"
 msgid "Do I have to make my project open source to use Juicebox as its business model?"
 msgstr "要把 Juicebox 用作项目的商业模式的话，我必须把项目进行开源吗？"
 
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Do I need to migrate my V1 project?"
+msgstr ""
+
 #: src/components/Navbar/constants.ts
 msgid "Docs"
 msgstr "文档"
@@ -1398,6 +1402,10 @@ msgstr ""
 msgid "If you don't raise this amount, your splits will receive their percentage of whatever you raise."
 msgstr ""
 
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "If you have Juicebox project on Juicebox V1 and V2, we recommend you migrate to V2."
+msgstr ""
+
 #: src/components/shared/Project/ProjectToolsDrawer/PayableAddressSection.tsx
 msgid "If you have already deployed a payable address and have lost it, please contact the Juicebox team through <0>Discord.</0>"
 msgstr "如果你已经部署过可支付地址但把它弄丢了，请到<0>Discord</0>去联系 Juicebox 团队。"
@@ -1496,6 +1504,10 @@ msgstr "JBX 费率 ({feePercentage}%):"
 #: src/components/v2/shared/DistributionSplitsSection/DistributionSplitModal.tsx
 msgid "Juicebox Project ID"
 msgstr "Juicebox 项目标识"
+
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Juicebox V1 project ID"
+msgstr ""
 
 #: src/components/v2/shared/SplitItem.tsx
 msgid "Juicebox V2 project with ID {0}"
@@ -1601,6 +1613,10 @@ msgstr ""
 
 #: src/components/shared/inputs/Pay/MemoFormItem.tsx
 msgid "Memo (optional)"
+msgstr ""
+
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Migrate V1 project to V2"
 msgstr ""
 
 #: src/components/v1/V1Project/modals/MigrateV1Pt1Modal.tsx
@@ -2437,6 +2453,19 @@ msgstr "设定您的筹款周期时长。"
 msgid "Set this to the sum of all your payouts"
 msgstr ""
 
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Set up V1 Migration"
+msgstr ""
+
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Set up migration"
+msgstr ""
+
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Set up your Juicebox V2 project for migration from your Juicebox V1 project."
+msgstr ""
+
 #: src/components/Landing/index.tsx
 msgid "Should you Juicebox?"
 msgstr "你应该使用Juicebox吗?"
@@ -2973,6 +3002,10 @@ msgstr "Juicebox 平台怎么收费？"
 #: src/components/Landing/QAs.tsx
 msgid "What is overflow?"
 msgstr "什么是溢出？"
+
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "What is the V1-V2 Migration Payment Terminal?"
+msgstr ""
 
 #: src/components/Landing/QAs.tsx
 msgid "What's a bonding curve?"

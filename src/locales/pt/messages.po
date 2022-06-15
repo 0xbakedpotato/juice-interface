@@ -1075,6 +1075,10 @@ msgstr "Limite de distribuição, duração e pagamentos"
 msgid "Do I have to make my project open source to use Juicebox as its business model?"
 msgstr "Tenho que fazer meu projeto de código aberto para usar Juicebox como seu modelo de negócios?"
 
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Do I need to migrate my V1 project?"
+msgstr ""
+
 #: src/components/Navbar/constants.ts
 msgid "Docs"
 msgstr "Documentos"
@@ -1398,6 +1402,10 @@ msgstr "Se você não arrecadar a soma de todos os seus pagamentos (<0/>{distrib
 msgid "If you don't raise this amount, your splits will receive their percentage of whatever you raise."
 msgstr "Se você não arrecadar esta quantidade, os seus splits irão receber as porcentagens de tudo o que arrecadou."
 
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "If you have Juicebox project on Juicebox V1 and V2, we recommend you migrate to V2."
+msgstr ""
+
 #: src/components/shared/Project/ProjectToolsDrawer/PayableAddressSection.tsx
 msgid "If you have already deployed a payable address and have lost it, please contact the Juicebox team through <0>Discord.</0>"
 msgstr "Se você já implantou um endereço de pagamento e o perdeu, por favor, contate o time do Juicebox por meio do <0>Discord.</0>"
@@ -1496,6 +1504,10 @@ msgstr "Taxa de JBX ({feePercentage}%):"
 #: src/components/v2/shared/DistributionSplitsSection/DistributionSplitModal.tsx
 msgid "Juicebox Project ID"
 msgstr "ID do projeto Juicebox"
+
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Juicebox V1 project ID"
+msgstr ""
 
 #: src/components/v2/shared/SplitItem.tsx
 msgid "Juicebox V2 project with ID {0}"
@@ -1601,6 +1613,10 @@ msgstr "Máximo de {MAX_DESCRIPTION_LENGTH} caracteres"
 
 #: src/components/shared/inputs/Pay/MemoFormItem.tsx
 msgid "Memo (optional)"
+msgstr ""
+
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Migrate V1 project to V2"
 msgstr ""
 
 #: src/components/v1/V1Project/modals/MigrateV1Pt1Modal.tsx
@@ -2437,6 +2453,19 @@ msgstr "Defina a duração de seus ciclos de financiamento."
 msgid "Set this to the sum of all your payouts"
 msgstr "Defina isso na soma de todos os seus pagamentos"
 
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Set up V1 Migration"
+msgstr ""
+
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Set up migration"
+msgstr ""
+
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "Set up your Juicebox V2 project for migration from your Juicebox V1 project."
+msgstr ""
+
 #: src/components/Landing/index.tsx
 msgid "Should you Juicebox?"
 msgstr "Você deveria usar o Juicebox?"
@@ -2973,6 +3002,10 @@ msgstr "Quanto custa o Juicebox?"
 #: src/components/Landing/QAs.tsx
 msgid "What is overflow?"
 msgstr "O que é overflow?"
+
+#: src/components/shared/Project/ProjectToolsDrawer/V1V2MigrationSection.tsx
+msgid "What is the V1-V2 Migration Payment Terminal?"
+msgstr ""
 
 #: src/components/Landing/QAs.tsx
 msgid "What's a bonding curve?"

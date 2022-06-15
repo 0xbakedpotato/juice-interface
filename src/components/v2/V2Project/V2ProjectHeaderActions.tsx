@@ -24,7 +24,6 @@ import V2ReconfigureFundingModalTrigger from './V2ProjectReconfigureModal/V2Reco
 export default function V2ProjectHeaderActions() {
   const { projectId, tokenSymbol, projectOwnerAddress } =
     useContext(V2ProjectContext)
-
   const {
     theme: { colors },
   } = useContext(ThemeContext)
@@ -32,10 +31,9 @@ export default function V2ProjectHeaderActions() {
   const [toolDrawerVisible, setToolDrawerVisible] = useState<boolean>(false)
 
   const canReconfigure = useHasPermission(V2OperatorPermission.RECONFIGURE)
+  const { data: unclaimedTokenBalance } = useUserUnclaimedTokenBalance()
 
   const showReconfigureButton = canReconfigure
-
-  const { data: unclaimedTokenBalance } = useUserUnclaimedTokenBalance()
 
   return (
     <div
