@@ -1,4 +1,3 @@
-import FeedbackFormButton from 'components/shared/FeedbackFormButton'
 import ScrollToTopButton from 'components/shared/ScrollToTopButton'
 
 import {
@@ -192,7 +191,6 @@ export default function V1Dashboard() {
           <div style={{ textAlign: 'center', padding: 20 }}>
             <ScrollToTopButton />
           </div>
-          <FeedbackFormButton projectHandle={handle} />
         </div>
       </V1CurrencyProvider>
     </V1ProjectContext.Provider>
