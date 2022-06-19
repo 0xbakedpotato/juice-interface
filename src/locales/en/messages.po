@@ -1305,11 +1305,6 @@ msgstr ""
 msgid "General"
 msgstr "General"
 
-#: src/components/shared/FeedbackFormButton.tsx
-#: src/components/shared/FeedbackFormButton.tsx
-msgid "Give feedback"
-msgstr "Give feedback"
-
 #: src/components/shared/EtherscanLink.tsx
 msgid "Go to Etherscan"
 msgstr ""

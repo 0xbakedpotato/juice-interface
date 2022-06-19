@@ -1310,11 +1310,6 @@ msgstr "Os fundos serão distribuídos para:"
 msgid "General"
 msgstr "Geral"
 
-#: src/components/shared/FeedbackFormButton.tsx
-#: src/components/shared/FeedbackFormButton.tsx
-msgid "Give feedback"
-msgstr "Dê um feedback"
-
 #: src/components/shared/EtherscanLink.tsx
 msgid "Go to Etherscan"
 msgstr "Vá para Etherscan"

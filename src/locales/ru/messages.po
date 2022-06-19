@@ -1310,11 +1310,6 @@ msgstr "Средства будут распределены по следующ
 msgid "General"
 msgstr ""
 
-#: src/components/shared/FeedbackFormButton.tsx
-#: src/components/shared/FeedbackFormButton.tsx
-msgid "Give feedback"
-msgstr "Оставьте свой отзыв"
-
 #: src/components/shared/EtherscanLink.tsx
 msgid "Go to Etherscan"
 msgstr "Перейти к Etherscan"

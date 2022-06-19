@@ -1310,11 +1310,6 @@ msgstr "资金将会分发给："
 msgid "General"
 msgstr ""
 
-#: src/components/shared/FeedbackFormButton.tsx
-#: src/components/shared/FeedbackFormButton.tsx
-msgid "Give feedback"
-msgstr "提交反馈"
-
 #: src/components/shared/EtherscanLink.tsx
 msgid "Go to Etherscan"
 msgstr "跳转到 Etherscan"

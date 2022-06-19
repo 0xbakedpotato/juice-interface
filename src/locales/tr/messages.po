@@ -1310,11 +1310,6 @@ msgstr "Fonlar şunlara dağıtılacaktır:"
 msgid "General"
 msgstr ""
 
-#: src/components/shared/FeedbackFormButton.tsx
-#: src/components/shared/FeedbackFormButton.tsx
-msgid "Give feedback"
-msgstr "Geribildirim verin"
-
 #: src/components/shared/EtherscanLink.tsx
 msgid "Go to Etherscan"
 msgstr "Etherscan'e git"
