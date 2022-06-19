@@ -384,6 +384,7 @@ msgstr "Tudo {0} irá para o proprietário do projeto:"
 
 #: src/components/shared/forms/TicketingForm.tsx
 #: src/components/v2/V2Create/forms/TokenForm/ReservedTokensFormItem.tsx
+#: src/components/v2/V2Project/V2FundingCycleSection/modals/EditTokenAllocationModal.tsx
 msgid "Allocate a portion of your project's reserved tokens to other Ethereum wallets or Juicebox projects."
 msgstr "Defina uma porção dos tokens reservados por seu projeto para outras carteiras de Ethereum ou projetos do Juicebox."
 
@@ -591,6 +592,7 @@ msgstr "Posso excluir um projeto?"
 
 #: src/components/shared/modals/AttachStickerModal.tsx
 #: src/components/v1/V1Project/modals/BalancesModal.tsx
+#: src/components/v2/V2Project/V2FundingCycleSection/modals/EditTokenAllocationModal.tsx
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -668,6 +670,7 @@ msgstr "Reivindicar {tokenTextLong} irá converter o seu saldo de {tokenTextShor
 #: src/components/v1/V1Project/V1DownloadPaymentsModal.tsx
 #: src/components/v2/V2Project/V2DownloadActivityModal.tsx
 #: src/components/v2/V2Project/V2DownloadPaymentsModal.tsx
+#: src/components/v2/V2Project/V2FundingCycleSection/modals/EditTokenAllocationModal.tsx
 msgid "Close"
 msgstr "Fechar"
 
@@ -1180,11 +1183,13 @@ msgid "Edit project details"
 msgstr "Editar detalhes do projeto"
 
 #: src/components/v1/shared/TicketModsList.tsx
+#: src/components/v2/V2Project/V2FundingCycleSection/modals/EditTokenAllocationModal.tsx
 msgid "Edit reserved token allocation"
 msgstr "Editar a alocação de tokens reservados"
 
 #: src/components/shared/modals/ReservedTokenReceiverModal.tsx
 #: src/components/v1/shared/TicketModsList.tsx
+#: src/components/v2/V2Project/V2FundingCycleSection/ReservedTokensSplitsCard.tsx
 msgid "Edit token allocation"
 msgstr "Editar alocação de token"
 
@@ -2286,6 +2291,7 @@ msgstr ""
 
 #: src/components/shared/forms/TicketingForm.tsx
 #: src/components/v2/V2Create/forms/TokenForm/ReservedTokensFormItem.tsx
+#: src/components/v2/V2Project/V2FundingCycleSection/modals/EditTokenAllocationModal.tsx
 msgid "Reserved token allocation (optional)"
 msgstr "Alocação de tokens reservados (opcional)"
 
@@ -2413,6 +2419,7 @@ msgstr "Salvar regras"
 
 #: src/components/shared/modals/ReservedTokenReceiverModal.tsx
 #: src/components/v1/shared/TicketModsList.tsx
+#: src/components/v2/V2Project/V2FundingCycleSection/modals/EditTokenAllocationModal.tsx
 msgid "Save token allocation"
 msgstr "Salvar alocação de token"
 
